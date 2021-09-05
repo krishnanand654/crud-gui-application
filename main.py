@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 root=Tk()
+root.title("CRUD")
 root.geometry("350x250")
 
 f=open("data.txt",'a')
@@ -9,6 +10,7 @@ f.close()
 
 def create():
     top=Toplevel()
+    top.title("Create")
     top.geometry("250x150")
     
     def submit():
@@ -55,6 +57,7 @@ def create():
         
 def read():
     top=Toplevel()
+    top.title("Read")
     top.geometry("500x500")
     def read1():
         f=open("data.txt",'r')
@@ -82,6 +85,7 @@ def read():
 
 def update():
     top=Toplevel()
+    top.title("Update")
     top.geometry("250x150")
     def update1():
         s= e1.get()
@@ -127,7 +131,7 @@ def update():
     e1 = Entry(top, font = ("Arial",10,"normal"))
     l2 = Label(top, text = "Name : ", font = ("Arial",10,"bold"))
     e2 = Entry(top)
-    B = Button(top, text = "Submit", command=update1)
+    B = Button(top, text = "Update", command=update1)
     l1.grid(row= 0 , column = 0)
     e1.grid(row = 0, column = 1)
     l2.grid(row=1, column =0)
@@ -137,6 +141,7 @@ def update():
 
 def delete():
     top=Toplevel()
+    top.title("Delete")
     top.geometry("250x150")
     def delete1():
         #searching
